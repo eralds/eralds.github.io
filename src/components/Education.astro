@@ -4,16 +4,16 @@ const degrees = [
     degree: "Master's in Machine Learning, Data Science and AI",
     school: 'Aalto University',
     location: 'Espoo, Finland',
-    period: 'Sep 2023 – Jul 2025',
-    gpa: '4.43 / 5.0 — With Honors',
+    period: 'Sep 2023 to Jul 2025',
+    honors: 'With Honors',
     courses: ['Reinforcement Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Probabilistic Machine Learning', 'Data Science'],
   },
   {
     degree: "Bachelor's in Computational Engineering",
     school: 'Aalto University',
     location: 'Espoo, Finland',
-    period: 'Sep 2020 – Jun 2023',
-    gpa: '4.31 / 5.0 — With Honors',
+    period: 'Sep 2020 to Jun 2023',
+    honors: 'With Honors',
     courses: ['Programming Parallel Computers', 'Algorithms & Data Structures', 'Artificial Intelligence', 'Numerical Methods'],
   },
 ];
@@ -32,13 +32,7 @@ const degrees = [
           <div class="mb-5">
             <h3 class="text-base font-semibold text-slate-900 leading-snug mb-1">{edu.degree}</h3>
             <p class="text-accent text-sm font-medium">{edu.school} &middot; {edu.location}</p>
-            <p class="mt-1 text-xs text-slate-400">{edu.period}</p>
-          </div>
-          <div class="mb-5 inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3 py-1.5">
-            <svg class="h-3.5 w-3.5 text-accent" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-xs font-semibold text-accent">{edu.gpa}</span>
+            <p class="mt-1 text-xs text-slate-400">{edu.period} &middot; {edu.honors}</p>
           </div>
           <div>
             <p class="mb-2.5 text-xs font-semibold uppercase tracking-widest text-slate-400">Key Courses</p>
@@ -62,7 +56,7 @@ const degrees = [
         </div>
         <div>
           <p class="text-sm font-semibold text-slate-900">7th place out of 364 students</p>
-          <p class="text-xs text-slate-400">Programming Parallel Computers — Aalto University</p>
+          <p class="text-xs text-slate-400">Programming Parallel Computers, Aalto University</p>
         </div>
       </div>
       <div class="flex items-center gap-4">
@@ -72,7 +66,7 @@ const degrees = [
           </svg>
         </div>
         <div>
-          <p class="text-sm font-semibold text-slate-900">100% Scholarship — 5 consecutive years</p>
+          <p class="text-sm font-semibold text-slate-900">100% Scholarship, 5 consecutive years</p>
           <p class="text-xs text-slate-400">Awarded by Aalto University</p>
         </div>
       </div>

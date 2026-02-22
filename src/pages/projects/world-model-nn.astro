@@ -4,7 +4,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
 
 <ProjectLayout
   title="World Model Neural Network Architectures"
-  period="Sep – Dec 2024"
+  period="Sep to Dec 2024"
   tags={['Reinforcement Learning', 'PyTorch', 'HPC', 'Weights & Biases', 'Python']}
   github="https://github.com/eralds/Investigating-World-Model-Neural-Network-Architectures"
   description="Investigating how different neural network architectures perform as transition function models within reinforcement learning world models."
@@ -13,15 +13,15 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
     <div>
       <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Overview</h2>
       <p>
-        World models are a core component in model-based reinforcement learning — they learn a compact internal representation
+        World models are a core component in model-based reinforcement learning. They learn a compact internal representation
         of the environment so an agent can plan ahead without taking real actions. The quality of the learned transition
         function (predicting the next state given a current state and action) directly impacts agent performance.
       </p>
       <p class="mt-4">
         This project systematically compared three neural network architectures as world model transition functions:
-        <strong class="text-slate-700">MLP</strong> (feedforward baseline),
-        <strong class="text-slate-700">RNN</strong> (recurrent, captures temporal dependencies), and
-        <strong class="text-slate-700">Transformer</strong> (attention-based, state-of-the-art sequence modelling).
+        <span class="font-semibold text-slate-800">MLP</span> (feedforward baseline),
+        <span class="font-semibold text-slate-800">RNN</span> (recurrent, captures temporal dependencies), and
+        <span class="font-semibold text-slate-800">Transformer</span> (attention-based, state-of-the-art sequence modelling).
       </p>
     </div>
 
@@ -34,11 +34,11 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
         </li>
         <li class="flex gap-3">
           <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
-          Ran large-scale experiments on Aalto University's <strong class="text-slate-700">Triton HPC cluster</strong> with multi-GPU support to handle training at scale.
+          Ran large-scale experiments on Aalto University's <span class="font-semibold text-slate-800">Triton HPC cluster</span> with multi-GPU support to handle training at scale.
         </li>
         <li class="flex gap-3">
           <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
-          Tracked all runs, metrics, and visualizations using <strong class="text-slate-700">Weights & Biases</strong> for reproducibility and comparison.
+          Tracked all runs, metrics, and visualizations using <span class="font-semibold text-slate-800">Weights & Biases</span> for reproducibility and comparison.
         </li>
         <li class="flex gap-3">
           <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>

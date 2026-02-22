@@ -4,7 +4,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
 
 <ProjectLayout
   title="FolGPT"
-  period="Jun – Jul 2023"
+  period="Jun to Jul 2023"
   tags={['Flask', 'GPT-4', 'Azure Cognitive Services', 'JavaScript', 'Python']}
   github="https://github.com/eralds/folGPT"
   description="A web-based multilanguage voice assistant that supports conversation in 100+ languages using GPT-4 and Azure Speech APIs."
@@ -13,7 +13,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
     <div>
       <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Overview</h2>
       <p>
-        FolGPT is a voice-first conversational assistant for the web. The key differentiator is its multilanguage support —
+        FolGPT is a voice-first conversational assistant for the web. The key differentiator is its multilanguage support:
         it can hold conversations in over 100 locales, including many languages that have no existing voice assistant support
         (e.g., Albanian, Swahili, and dozens of other underrepresented languages).
       </p>
@@ -27,7 +27,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
       <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">How It Works</h2>
       <div class="space-y-3">
         {[
-          { step: '1', label: 'Audio capture', desc: 'User speaks into the browser — audio is captured via Web APIs.' },
+          { step: '1', label: 'Audio capture', desc: 'User speaks into the browser. Audio is captured via Web APIs.' },
           { step: '2', label: 'Speech to text', desc: 'Audio is sent to Azure Cognitive Services, which transcribes it in the detected language.' },
           { step: '3', label: 'GPT-4 response', desc: 'The transcript is sent to GPT-4 via the OpenAI API, which generates a contextual reply.' },
           { step: '4', label: 'Text to speech', desc: 'The reply is converted back to speech by Azure TTS and played in the browser.' },
