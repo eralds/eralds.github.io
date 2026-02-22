@@ -1,0 +1,82 @@
+---
+const roles = [
+  {
+    title: 'Master\'s Thesis Worker / Research Assistant',
+    org: 'Aalto University',
+    location: 'Espoo, Finland',
+    period: 'Jan 2025 – Jul 2025',
+    group: 'Information Technologies in Industrial Automation (Prof. Valeriy Vyatkin)',
+    bullets: [
+      'Researched safe reinforcement learning for ship energy optimization in collaboration with Semantum and ABB Marine.',
+      'Built a full proof-of-concept RL control pipeline: whitebox physical simulation, surrogate neural network, safe RL agent, and an LLM-based reward function generator.',
+      'Published at IEEE ETFA 2025; received Best Work in Progress Paper Award.',
+    ],
+  },
+  {
+    title: 'Summer Teaching Assistant / Intern',
+    org: 'Aalto University',
+    location: 'Espoo, Finland',
+    period: 'Jun 2024 – Aug 2024',
+    group: 'Reinforcement Learning Research Group (Prof. Joni Pajarinen)',
+    bullets: [
+      'Led development of autograding features for RL course programming assignments.',
+      'Worked directly with RL researchers to design and test automated grading pipelines.',
+    ],
+  },
+  {
+    title: 'Teaching Assistant',
+    org: 'Aalto University',
+    location: 'Espoo, Finland',
+    period: 'Feb 2022 – Jun 2024',
+    group: 'Multiple courses',
+    bullets: [
+      'Taught Programming Parallel Computers, Artificial Intelligence, Data Structures & Algorithms, and Programming 2.',
+      'Provided weekly one-to-one mentoring to 500+ students per course — reviewing code and explaining programming concepts.',
+    ],
+  },
+];
+---
+
+<section id="experience" class="bg-white py-24">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="reveal mb-14">
+      <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">Experience</p>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="text-3xl font-bold text-slate-900">Work History</h2>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-4 top-0 bottom-0 hidden w-px bg-slate-100 md:block"></div>
+
+      <div class="space-y-8">
+        {roles.map((role) => (
+          <div class="reveal relative md:pl-12">
+            <!-- Timeline dot -->
+            <div class="absolute left-2.5 top-6 hidden h-3 w-3 -translate-x-1/2 rounded-full border-2 border-accent bg-white md:block"></div>
+
+            <div class="rounded-2xl border border-slate-100 bg-white p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="mb-5 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-base font-semibold text-slate-900">{role.title}</h3>
+                  <p class="mt-1 text-sm font-medium text-accent">{role.org} &middot; {role.location}</p>
+                  <p class="mt-0.5 text-xs text-slate-400">{role.group}</p>
+                </div>
+                <span class="shrink-0 rounded-lg bg-slate-50 border border-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+                  {role.period}
+                </span>
+              </div>
+              <ul class="space-y-2">
+                {role.bullets.map((b) => (
+                  <li class="flex gap-3 text-slate-500 text-sm leading-relaxed">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

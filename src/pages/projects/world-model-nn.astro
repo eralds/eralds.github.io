@@ -1,0 +1,67 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="World Model Neural Network Architectures"
+  period="Sep – Dec 2024"
+  tags={['Reinforcement Learning', 'PyTorch', 'HPC', 'Weights & Biases', 'Python']}
+  github="https://github.com/eralds/Investigating-World-Model-Neural-Network-Architectures"
+  description="Investigating how different neural network architectures perform as transition function models within reinforcement learning world models."
+>
+  <div class="space-y-10 text-slate-500 leading-relaxed">
+    <div>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Overview</h2>
+      <p>
+        World models are a core component in model-based reinforcement learning — they learn a compact internal representation
+        of the environment so an agent can plan ahead without taking real actions. The quality of the learned transition
+        function (predicting the next state given a current state and action) directly impacts agent performance.
+      </p>
+      <p class="mt-4">
+        This project systematically compared three neural network architectures as world model transition functions:
+        <strong class="text-slate-700">MLP</strong> (feedforward baseline),
+        <strong class="text-slate-700">RNN</strong> (recurrent, captures temporal dependencies), and
+        <strong class="text-slate-700">Transformer</strong> (attention-based, state-of-the-art sequence modelling).
+      </p>
+    </div>
+
+    <div>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Methodology</h2>
+      <ul class="space-y-3">
+        <li class="flex gap-3">
+          <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
+          Designed and trained each architecture on the same RL environment transition data to enable fair comparison.
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
+          Ran large-scale experiments on Aalto University's <strong class="text-slate-700">Triton HPC cluster</strong> with multi-GPU support to handle training at scale.
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
+          Tracked all runs, metrics, and visualizations using <strong class="text-slate-700">Weights & Biases</strong> for reproducibility and comparison.
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60"></span>
+          Evaluated models on prediction accuracy, sample efficiency, and downstream agent performance.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Tech Stack</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {[
+          { label: 'Framework', value: 'PyTorch' },
+          { label: 'Experiment Tracking', value: 'Weights & Biases' },
+          { label: 'Compute', value: 'Aalto Triton HPC (multi-GPU)' },
+          { label: 'Language', value: 'Python' },
+        ].map(({ label, value }) => (
+          <div class="rounded-xl border border-slate-100 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-1">{label}</p>
+            <p class="text-sm font-medium text-slate-800">{value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</ProjectLayout>

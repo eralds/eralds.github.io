@@ -1,0 +1,44 @@
+---
+const skillGroups = [
+  {
+    category: 'Languages',
+    skills: ['Python', 'C / C++', 'SQL', 'JavaScript'],
+  },
+  {
+    category: 'ML & AI',
+    skills: ['PyTorch', 'Reinforcement Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Probabilistic ML'],
+  },
+  {
+    category: 'Systems & HPC',
+    skills: ['Git', 'Linux', 'Docker', 'Kubernetes', 'CUDA', 'HPC / Multi-GPU', 'Parallel Programming'],
+  },
+  {
+    category: 'Cloud & Tools',
+    skills: ['GCP', 'Weights & Biases', 'GitHub Actions'],
+  },
+];
+---
+
+<section id="skills" class="bg-white py-24">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="reveal mb-14">
+      <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">Expertise</p>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="text-3xl font-bold text-slate-900">Skills</h2>
+    </div>
+
+    <div class="reveal grid gap-5 sm:grid-cols-2">
+      {skillGroups.map((group) => (
+        <div class="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">{group.category}</p>
+          <div class="flex flex-wrap gap-2">
+            {group.skills.map((skill) => (
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-accent cursor-default">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

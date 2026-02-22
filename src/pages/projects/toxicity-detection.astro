@@ -1,0 +1,62 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="Automated English Toxicity Detection"
+  period="Mar – Jun 2024"
+  tags={['NLP', 'BERT', 'LSTM', 'Scikit-learn', 'Python', 'Jupyter']}
+  github="https://github.com/eralds/Automated-English-Toxicity-Detection"
+  description="A comprehensive benchmark of classical ML and deep learning approaches for detecting toxic content in English text."
+>
+  <div class="space-y-10 text-slate-500 leading-relaxed">
+    <div>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Overview</h2>
+      <p>
+        Toxicity detection is a core problem in content moderation — automatically identifying harmful, offensive, or
+        abusive language at scale. This project benchmarked a wide range of ML approaches, from classical feature-based
+        methods to state-of-the-art transformer models, to understand the trade-offs between accuracy, complexity, and
+        training cost.
+      </p>
+    </div>
+
+    <div>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Approaches Compared</h2>
+      <div class="space-y-4">
+        <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
+          <p class="mb-2 text-sm font-semibold text-slate-900">Classical ML (baselines)</p>
+          <p class="text-sm">SVM and Random Forests combined with TF-IDF and Word2Vec embeddings. Fast to train and interpretable, but limited by the quality of bag-of-words representations.</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
+          <p class="mb-2 text-sm font-semibold text-slate-900">LSTM (deep learning)</p>
+          <p class="text-sm">GPU-optimized LSTM networks trained on token sequences. Captures word order and short-range context better than classical methods.</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
+          <p class="mb-2 text-sm font-semibold text-slate-900">BERT (best results)</p>
+          <p class="text-sm">Fine-tuned BERT-based models achieved the highest classification accuracy by leveraging pre-trained bidirectional language understanding.</p>
+        </div>
+        <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
+          <p class="mb-2 text-sm font-semibold text-slate-900">Ensemble methods</p>
+          <p class="text-sm">Combination strategies across model families to test if ensembling could close the gap between classical and deep approaches.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 style="font-family: 'Inter Tight', Inter, sans-serif;" class="mb-4 text-2xl font-bold text-slate-900">Tech Stack</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {[
+          { label: 'Deep Learning', value: 'PyTorch, Hugging Face Transformers' },
+          { label: 'Classical ML', value: 'Scikit-learn' },
+          { label: 'Embeddings', value: 'TF-IDF, Word2Vec' },
+          { label: 'Language', value: 'Python (Jupyter Notebooks)' },
+        ].map(({ label, value }) => (
+          <div class="rounded-xl border border-slate-100 bg-white p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-1">{label}</p>
+            <p class="text-sm font-medium text-slate-800">{value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</ProjectLayout>
